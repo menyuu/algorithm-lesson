@@ -25,3 +25,10 @@ def trance_binary():
         n = n // 2
     return ans
 print(trance_binary())
+
+
+a = 2
+b = 8
+c = 8
+
+print(a * b * c)
