@@ -1,10 +1,23 @@
-n = int(input())
-a = [int(input()) for _ in range(n)]
+N, n = map(int, input().split())
+a = [int(input()) for _ in range(N)]
 
-for i in range(n):
-    print('i = ',i)
-    for j in range(i):
-        print('j = ',j)
-        print('######################')
-        print('a[i] = {}, a[j] = {}'.format(a[i], a[j]))
-        print(a[i] * a[j])
+if n > len(a):
+    for i in range(n - len(a)):
+        a.append(0)
+elif n < len(a):
+    del a[n:]
+
+for i in a:
+    print(i)
+
+
+N, n = map(int, input().split())
+a = [0] * n
+
+for i in range(N):
+    a_i = input()
+    if i < n:
+        a[i] = a_i
+
+for ele in a:
+    print(ele)

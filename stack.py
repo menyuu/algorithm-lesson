@@ -17,3 +17,5 @@ for i in range(0, 1 << N):
 
 # 出力
 print(answer)
+
+
