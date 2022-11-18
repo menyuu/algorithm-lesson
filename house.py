@@ -75,3 +75,18 @@ while n >= i:
     i += 1
 
 print(count)
+
+
+n, s = map(int, input().split())
+count = 0
+i = 1
+
+while n >= i:
+    j = 1
+    while n >= j:
+        if i + j <= s:
+            count += 1
+        j += 1
+    i += 1
+
+print(count)
