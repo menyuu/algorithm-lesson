@@ -59,3 +59,19 @@ for i in range(n):
     sum += a[i]
 
 print(sum % 100)
+
+
+n = int(input())
+print((2 * n) + 3)
+
+n, x, y = map(int, input().split())
+count = 0
+i = 1
+
+
+while n >= i:
+    if i % x == 0 or  i % y == 0:
+        count += 1
+    i += 1
+
+print(count)
