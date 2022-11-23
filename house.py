@@ -90,3 +90,27 @@ while n >= i:
     i += 1
 
 print(count)
+
+###################################
+
+def f(n):
+    result = 1
+    i = 1
+    while n > i:
+        i += 1
+        result *= i
+    return result
+
+x = int(input())
+print(f(x))
+
+###################################
+
+n = int(input())
+
+for i in range(2, n+1):
+    for j in range(2, i):
+        if i % j == 0:
+            break
+    else:
+        print(i)
