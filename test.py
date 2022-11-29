@@ -182,3 +182,52 @@ for _ in range(q):
 
 for j in s:
     print(j)
+
+
+#########################################################
+
+
+N, K = map(int, input().split())
+roster = {x: y for x, y in [input().split() for _ in range(N)]}
+
+for _ in range(K):
+    s = input().split()
+    if s[0] == "join":
+        num, ID = s[1:]
+        roster[num] = ID
+    elif s[0] == "leave":
+        num = s[1]
+        del roster[num]
+    else:
+        num = s[1]
+        print(roster[num])
+
+
+#########################################################
+
+n, k = map(int, input().split())
+s = [input() for i in range(n)]
+d = {}
+
+for _ in range(k):
+    y, c = input().split()
+    y = int(y)
+    d[y] = c
+
+for y, c in sorted(d.items()):
+    print(c)
+
+
+n, k = map(int, input().split())
+s = [input() for i in range(n)]
+
+l = [None] * k
+for i in range(k):
+    y, c = input().split()
+    l[i] = (int(y), c)
+
+for y, c in sorted(l):
+    print(c)
+
+
+#########################################################
