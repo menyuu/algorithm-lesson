@@ -231,3 +231,21 @@ for y, c in sorted(l):
 
 
 #########################################################
+
+
+n, k = map(int, input().split())
+d = {}
+
+for _ in range(n):
+    a, b, c = input().split()
+    d[a] = (b, int(c))
+
+for _ in range(k):
+    x, y, z = input().split()
+    a, b = d[x]
+    if a != y:
+        continue
+    d[x] = (a, b - int(z))
+
+for i, j in d.items():
+    print(i, d[i][1])
